@@ -11,4 +11,10 @@ require 'core/Router.php';
 require 'core/Request.php';
 
 
-return new QueryBuilder(Connection::make( $config['database'] ));
+new QueryBuilder(Connection::make($config['database']));
+
+function view($path, $data = array()) {
+    extract($data);
+
+    return require "views/{$path}.view.php";
+}

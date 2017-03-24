@@ -2,22 +2,16 @@
 
 class Connection {
 
-	public static function make($config)
-	{
-		try {
+    public static function make($config) {
+        try {
 
-			return new PDO(
-					$config['connection'].';dbname='.$config['name'],
-					$config['username'],
-					$config['password'],
-					$config['options']
-				);
+            return new PDO(
+                    $config['connection'] . ';dbname=' . $config['name'], $config['username'], $config['password'], $config['options']
+            );
+        } catch (Exception $e) {
 
-		} catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
 
-			echo $e->getMessage();
-
-		}
-
-	}
 }

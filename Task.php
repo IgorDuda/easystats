@@ -1,25 +1,19 @@
 <?php
 
 /**
-* 
-*/
-class Task
-{
-	public $description;
+ * 
+ */
+class Task {
 
-	public $completed = false;
-	
+    public $description;
+    public $completed = false;
 
-	public function complete()
-	{
-		$this->completed = true;
-	}
+    public function complete() {
+        $this->completed = true;
+    }
 
-
-	public function isComplete()
-	{
-		return $this->completed ;
-	}
-
+    public function isComplete() {
+        return $this->completed;
+    }
 
 }
