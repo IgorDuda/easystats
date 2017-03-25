@@ -2,7 +2,7 @@
 
 return [
     'database' => [
-        'name' => 'cms',
+        'name' => 'easystats',
         'username' => 'root',
         'password' => '',
         'connection' => 'mysql:host=localhost',
