@@ -2,13 +2,12 @@
 
 $router->get('', 'IndexController@index');
 
-$router->get('users/list', 'IndexController@home');
+$router->get('users', 'UsersController@index');
 
-$router->get('about', 'controllers/about.php');
+$router->get('users/add', 'UsersController@add');
 
-$router->get('contact', 'controllers/contact.php');
+$router->post('users/addhandler', 'UsersController@addhandler');
 
-$router->get('about/culture', 'controllers/about-culture.php');
 
 
 

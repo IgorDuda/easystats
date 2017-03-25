@@ -6,7 +6,6 @@ class IndexController
     public function index()
     {
         $data = App::get('database')->selectAll('users');
-
         return view('index', array('company' => 'TestCompany'));
     }
 
